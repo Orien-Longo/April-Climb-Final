@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class scrollSkybox : MonoBehaviour {
 
@@ -10,7 +11,7 @@ public class scrollSkybox : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        airCube = GetComponent<Skybox>();
+        airCube = FindObjectOfType<Skybox>();
         //airCube = GetComponent<Skybox>().GetComponent<;
 	}
 	

@@ -141,12 +141,17 @@ namespace TPC
                     states.run = false;
             }
 
-            if (!states.inAngle_MoveDir && hMove.doAngleCheck)
-                states.run = false;
+            //if (!states.inAngle_MoveDir && hMove.doAngleCheck)
+            //{
+            //    states.run = false;
+            //    states.walk = true;
+            //}
 
             if (states.obstacleForward)
+            {
                 states.run = false;
 
+            }
             if (states.run == false)
             {
                 states.anim.SetInteger(Statics.specialType, Statics.GetAnimSpecialType(AnimSpecials.runToStop));
