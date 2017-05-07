@@ -15,9 +15,9 @@ public class scrollSkybox : MonoBehaviour {
         //airCube = GetComponent<Skybox>().GetComponent<;
 	}
 	
-	// Update is called once per frame
+	
 	void Update () {
-        airCubeRot = airCube.material.GetFloat("Rotation");
+        //airCubeRot = airCube.material.GetFloat("Rotation");
         if (airCubeRot < 360f)
         {
             airCubeRot += rotationSpeed * 10f;
