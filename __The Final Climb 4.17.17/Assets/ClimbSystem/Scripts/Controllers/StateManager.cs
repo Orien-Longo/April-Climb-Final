@@ -228,7 +228,7 @@ namespace TPC
             RaycastHit hit = new RaycastHit();
             bool isHit = false;
 
-            //quadratic = true;
+            quadratic = true;
 
             if (quadratic)
             {

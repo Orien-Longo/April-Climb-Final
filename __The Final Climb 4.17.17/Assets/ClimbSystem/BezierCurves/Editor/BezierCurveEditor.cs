@@ -194,7 +194,7 @@ public class BezierCurveEditor : Editor
 		Handles.Label(point.position + new Vector3(0, HandleUtility.GetHandleSize(point.position) * 0.4f, 0), point.gameObject.name);
 		
 		Handles.color = Color.green;
-		Vector3 newPosition = Handles.FreeMoveHandle(point.position, point.transform.rotation, HandleUtility.GetHandleSize(point.position)*0.1f, Vector3.zero, Handles.RectangleCap);
+		Vector3 newPosition = Handles.FreeMoveHandle(point.position, point.transform.rotation, HandleUtility.GetHandleSize(point.position)*0.1f, Vector3.zero, Handles.RectangleHandleCap);
 		
 		if(newPosition != point.position)
 		{
@@ -205,7 +205,7 @@ public class BezierCurveEditor : Editor
 		if(point.handleStyle != BezierPoint.HandleStyle.None)
 		{
 			Handles.color = Color.cyan;
-			Vector3 newGlobal1 = Handles.FreeMoveHandle(point.globalHandle1, point.transform.rotation, HandleUtility.GetHandleSize(point.globalHandle1)*0.075f, Vector3.zero, Handles.CircleCap);
+			Vector3 newGlobal1 = Handles.FreeMoveHandle(point.globalHandle1, point.transform.rotation, HandleUtility.GetHandleSize(point.globalHandle1)*0.075f, Vector3.zero, Handles.CircleHandleCap);
 			if(point.globalHandle1 != newGlobal1)
 			{
 				Undo.RecordObject(point, "Move Handle");
@@ -213,7 +213,7 @@ public class BezierCurveEditor : Editor
 				if(point.handleStyle == BezierPoint.HandleStyle.Connected) point.globalHandle2 = -(newGlobal1 - point.position) + point.position;
 			}
 			
-			Vector3 newGlobal2 = Handles.FreeMoveHandle(point.globalHandle2, point.transform.rotation, HandleUtility.GetHandleSize(point.globalHandle2)*0.075f, Vector3.zero, Handles.CircleCap);
+			Vector3 newGlobal2 = Handles.FreeMoveHandle(point.globalHandle2, point.transform.rotation, HandleUtility.GetHandleSize(point.globalHandle2)*0.075f, Vector3.zero, Handles.CircleHandleCap);
 			if(point.globalHandle2 != newGlobal2)
 			{
                 Undo.RecordObject(point, "Move Handle");

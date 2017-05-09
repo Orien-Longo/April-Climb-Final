@@ -23,7 +23,7 @@ public class skydomeScript2 : MonoBehaviour {
     public float cloudHeight2 = 13.0f;
     public float cloudTint = 1.0f;
 
-    Vector4 vSunColourIntensity = new Vector4(1f, 1f, 1f, 100);
+    //Vector4 vSunColourIntensity = new Vector4(1f, 1f, 1f, 100);
     Vector4 vBetaRayleigh = new Vector4();
     Vector4 vBetaMie = new Vector4();
     Vector3 m_vBetaRayTheta = new Vector3();
