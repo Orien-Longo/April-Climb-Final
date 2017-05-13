@@ -129,7 +129,7 @@ namespace Controller
                         if (Physics.Raycast(secondOrigin, dir, out hit, 1, ignoreLayers))
                         {
                             float distance = Vector3.Distance(secondOrigin, origin);
-                            actualZ = -(distance / 2);
+                            actualZ = -(distance * 2);
                             return;
                         }
                     }
