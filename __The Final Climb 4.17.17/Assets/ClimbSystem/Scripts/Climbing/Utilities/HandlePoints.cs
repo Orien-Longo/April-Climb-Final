@@ -14,7 +14,7 @@ namespace Climbing
         public bool hangingPoints;
         public bool singlePoint;
 
-        [Header("Click this after every chnage")]
+        [Header("Click this after every change")]
         public bool updatePoints;
 
         [Header("Helper Utilities")]
