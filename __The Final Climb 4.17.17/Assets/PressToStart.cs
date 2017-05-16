@@ -5,28 +5,44 @@ using UnityEngine.SceneManagement;
 
 public class PressToStart : MonoBehaviour
 {
-    bool canStart = false;
+    static bool canStart;
 
-    void FixedUpdate()
+    private void Awake()
     {
-        if (Input.GetButtonDown("Jump"))
+         canStart = false;
+    }
+
+    void Update()
+    {
+        if (LerpUpandDown.reachedEnd)
         {
-            //Debug.Log("Start Game");
-            canStart = true;            
-            if (canStart)
-            {
-                WaitThenStart();
-                SceneManager.LoadScene(1, LoadSceneMode.Single);
-            }
+            BeginGame();
+        }
+        
+        if (canStart)
+        {
+            SceneManager.LoadScene(1, LoadSceneMode.Single);
+            Debug.Log("Start Game");
+
         }
     }
 
     IEnumerator WaitThenStart()
     {
+        yield return true;
+        yield return new WaitForSeconds(3); 
         
-        yield return new WaitForSeconds(3);
-        
-        
+        canStart = true;
+    }
 
+    void BeginGame()
+    {
+        if (Input.GetButtonDown("Jump"))
+        {
+            
+            WaitThenStart();
+
+        }
+        
     }
 }
