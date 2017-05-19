@@ -14,12 +14,19 @@ public class PressToStart : MonoBehaviour
 
     void Update()
     {
-        if (LerpUpandDown.reachedEnd)
-        {
-            BeginGame();
-        }
-        
-        if (canStart)
+        //if (LerpUpandDown.reachedEnd)
+        //{
+        //    BeginGame();
+        //}
+
+        //if (Input.GetButtonDown("Jump"))
+        //{
+
+        //    WaitThenStart();
+
+        //}
+
+        if (Input.GetButtonUp("Jump"))
         {
             SceneManager.LoadScene(1, LoadSceneMode.Single);
             Debug.Log("Start Game");
@@ -27,22 +34,17 @@ public class PressToStart : MonoBehaviour
         }
     }
 
-    IEnumerator WaitThenStart()
-    {
-        yield return true;
-        yield return new WaitForSeconds(3); 
+    //IEnumerator WaitThenStart()
+    //{
+    //    yield return true;
+    //    yield return new WaitForSeconds(3);
         
-        canStart = true;
-    }
+    //    canStart = true;
+    //}
 
-    void BeginGame()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            
-            WaitThenStart();
-
-        }
+    //void BeginGame()
+    //{
         
-    }
+        
+    //}
 }
