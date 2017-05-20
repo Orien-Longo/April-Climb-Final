@@ -37,9 +37,9 @@ namespace TPC
         public static float walkUpSpeed = 1.8f;
         public static float vaultSpeedRunning = 4.2f;
         public static float vaultSpeedIdle = 1;
-        public static float climbMaxHeight = 2.2f;
+        public static float climbMaxHeight = 2.0f;
         public static float walkUpHeight = 1;
-        public static float walkUpThreshold = 0.4f;
+        public static float walkUpThreshold = 0.5f;
         public static float climbSpeed = .5f;
         public static float climbUpStartPosOffset = 0.5f;
         #endregion

@@ -26,7 +26,7 @@ namespace UnityStandardAssets.Utility
 
         void Update()
         {
-            if (transform.position.y <= 7)
+            if (transform.position.y <= 77)
             {
                 transform.LookAt(target);
             }
